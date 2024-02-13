@@ -50,8 +50,8 @@ jobs:
 
       - name: Import Galaxy Role
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
-        env:
-          GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
+        # env:
+        #   GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
         run: |
           ansible-galaxy role import -s https://galaxy.ansible.com/api/ --api-key "${GALAXY_API_KEY}" "${GITHUB_REPOSITORY%/*}" "${GITHUB_REPOSITORY#*/}"
 
