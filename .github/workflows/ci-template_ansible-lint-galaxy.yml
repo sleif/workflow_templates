@@ -2,7 +2,8 @@
 name: CI Workflow Template for ansible-lint yamllint and Ansible Galaxy imports
 
 'on':
-  pull_request:
+  workflow_dispatch:
+  # pull_request:
   # schedule:
   #   - cron: "0 4 * * 5"
   push:
