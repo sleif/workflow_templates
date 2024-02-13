@@ -23,6 +23,12 @@ jobs:
     name: Lint and Ansible Galaxy import
     runs-on: ubuntu-latest
     steps:
+      # # https://github.com/marketplace/actions/checkout
+      # - name: Check out the codebase.
+      #   uses: actions/checkout@v4
+      #   with:
+      #     path: 'sleif.ws'
+
       - name: Secret test
         env:
           GALAXY_API_KEY_Test: "API: ${{ secrets.GALAXY_API_KEY }}"
@@ -31,12 +37,6 @@ jobs:
           echo ${GALAXY_API_KEY_Test%/*}
           echo ${GITHUB_REPOSITORY%/*}
           echo ${GITHUB_REPOSITORY#*/}
-
-      # # https://github.com/marketplace/actions/checkout
-      # - name: Check out the codebase.
-      #   uses: actions/checkout@v4
-      #   with:
-      #     path: 'sleif.ws'
 
       # # https://github.com/marketplace/actions/setup-python
       # - name: Set up Python 3
