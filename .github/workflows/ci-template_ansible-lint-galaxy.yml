@@ -36,8 +36,8 @@ jobs:
           path: 'sleif.ws'
 
       - name: Secret test
-        with:
-          token: ${{ secrets.GALAXY_API_KEY }}
+        # with:
+        #   token: ${{ secrets.GALAXY_API_KEY }}
           #         env:
           # GALAXY_API_KEY_Test: "API: ${{ secrets.GALAXY_API_KEY }}"
         run: |
