@@ -34,7 +34,7 @@ jobs:
           GALAXY_API_KEY_Test: "API: ${{ secrets.GALAXY_API_KEY }}"
         run: |
           echo "${{ secrets.GALAXY_API_KEY }}"
-          echo ${GALAXY_API_KEY_Test%/*}
+          echo ${GALAXY_API_KEY_Test}
           echo ${GITHUB_REPOSITORY%/*}
           echo ${GITHUB_REPOSITORY#*/}
 
