@@ -3,6 +3,10 @@ name: CI Workflow Template for ansible-lint yamllint and Ansible Galaxy imports
 
 'on':
   workflow_call:
+    secrects:
+      GALAXY_API_KEY:
+        description: 'This comes from the caller workflow'
+        required: true
   # pull_request:
   # schedule:
   #   - cron: "0 4 * * 5"
